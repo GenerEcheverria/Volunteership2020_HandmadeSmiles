@@ -1,0 +1,84 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.imagenes {
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagenes hr {
+    width: 10%;
+    margin: 10px;
+    border: 1px var(--fc) solid;
+    margin-bottom: 2%;
+}
+
+#conjuntoImagenes{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+#conjuntoImagenes img{
+    max-width: 100%;
+    cursor: pointer;
+}
+
+.item{
+    margin: 10px;
+    width: 23%;
+}
+
+.lightbox{
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: rgba(0,0, 0, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-close{
+    width: 70px;
+    height: 70px;
+    background: var(--med);
+    border: 3px solid var(--fc);
+    border-radius: 100%;
+    color: var(--fc);
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 12px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.infoProductos {
+    width: 83%;
+    background-color: var(--ds);
+    padding: 30px;
+    text-align: justify;
+}
+
+.infoProductos h2{
+    text-align: left;
+    padding: 15px;
+}
+
+.infoProductos p{
+    padding: 15px;
+    font-size: 24px;
+}

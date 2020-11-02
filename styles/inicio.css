@@ -1,0 +1,184 @@
+/*HERO*/
+.hero {
+   width: 100%;
+   height: 650px;
+   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/Images/hero.png') no-repeat center center/cover;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   color: var(--bg);
+}
+
+.hero h2 {
+    text-transform: uppercase;
+    font-size: 50px;
+    font-style: italic;
+    font-weight: lighter;
+    margin-bottom: 3%;
+}
+
+.hero p {
+    font-size: 40px;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+/*PRODUCTOS GENERALES*/
+.productosGenerales{
+    margin-top: 100px;    
+}
+
+.imagenesGenerales {
+    margin-top: 50px;
+    display: flex;
+    padding: 0 10px;
+}
+
+.imagenesGenerales img {
+    padding: 5px;
+}
+
+.grupo1{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.grupo2{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    
+}
+
+
+/*DESIGNER*/
+.designer{
+    width: 55%;
+    background: var(--ds);
+    display: flex;
+    align-items: center;
+    margin: 90px ;
+}
+
+.info{
+    padding: 10%;
+}
+
+.designer h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.designer p{
+    font-size: 24px;
+    text-align: justify;
+}
+
+/*SATISFACCION*/
+.satisfaccion{
+    background: var(--st);
+    color: black;
+    text-align: justify;
+    padding-top: 40px;
+}
+
+.satisfaccion ul{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 20px 40px 20px;
+    font-size: 18px;
+}
+
+.satisfaccion li{
+    width: 30%;
+    display: flex;
+    margin: 0 20px 0 20px;
+    align-items: center;
+}
+
+.satisfaccion img {
+    width: 160px;
+    height: 160px;
+}
+
+.satisfaccion p{
+    margin-left: 19px;
+}
+
+/*COMENTARIOS       ARREGLAR*/
+.clientes{
+    width: 100%;
+    background: var(--ds);
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+#slider{
+    background: var(--ds);
+	width: 960px;
+	overflow: hidden;
+}
+
+#slider-wrapper{
+    width: 9999px;
+	position: relative;
+	transition: left 400ms linear;
+}
+
+.slide{
+    float: left;
+	width: 960px;
+	height: 100px;
+	position: relative;
+	overflow: hidden;
+}
+
+.slide p{
+    position: absolute;
+    text-transform: initial;
+}
+
+.caption{
+    margin: 0;
+	position: absolute;
+	z-index: 100;
+	bottom: -2em;
+	left: 0;
+	width: 100%;
+	height: 2em;
+	line-height: 2;
+	text-align: center;
+	color: #fff;
+    transition: bottom 500ms ease-in;
+    font-size: 20px;
+}
+
+.caption.visible {
+    bottom: 0;
+}
+
+#slider-nav {
+	margin: 1em 0;
+	text-align: center;
+}
+
+#slider-nav a {
+	width: 2em;
+	height: 2em;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	line-height: 2;
+	margin-right: 0.5em;
+}
+
+#slider-nav a.current {
+	border-color: #000;
+}
+
+
+
+
