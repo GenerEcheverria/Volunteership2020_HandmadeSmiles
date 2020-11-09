@@ -9,8 +9,8 @@ $(".imagen").click(function(e){
     $("#zoom_mw").elevateZoom({
         scrollZoom : true,
         cursor: "crosshair",
-        zoomWindowOffetx: 15
-
+        zoomWindowOffetx: 15,
+        zoomLevel: 3
     });
     $(".btn-close").click(function(){
         $(".lightbox").remove();

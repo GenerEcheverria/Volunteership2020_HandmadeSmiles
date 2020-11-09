@@ -1,0 +1,33 @@
+.container hr{
+    width: 6%;
+    border: 1px var(--fc) solid;
+    margin: auto;
+    margin-bottom: 2%;
+}
+
+.container p{
+    font-size: 24px;
+}
+
+.contacto{
+    padding: 3% 14%;
+}
+
+.procedimiento{
+    padding: 4% 14%;
+}
+
+.pasos{
+    display: flex;
+    flex: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.tarjeta{
+    width: 15%;
+    background: #F1EADF;
+    padding: 5%;
+    border-radius: 10%;
+}

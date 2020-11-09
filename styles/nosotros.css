@@ -1,0 +1,56 @@
+
+.container{
+    font-size: 24px;
+    text-align: justify;
+    align-items: inherit;
+}
+
+.somos{
+    background: var(--st);
+    padding: 5% 4%;
+    text-align: center;
+    color: black;
+}
+
+.somos p{
+    margin-top: 2%;
+}
+
+.vision{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.prioridad{
+    display: flex;
+    align-items: center;
+}
+
+.info{
+    padding: 2% 6%;
+}
+
+.info p{
+    margin-top: 5%;
+}
+
+.img-nosotros{
+    max-width: 100%;
+    width: 50%;
+}
+
+.valores {
+    background-color: var(--ds);
+    padding: 4%;
+}
+
+.grupo-valores{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.grupo-valores li{
+    margin: 2% 4% 0 4%;
+}
