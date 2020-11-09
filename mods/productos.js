@@ -3,7 +3,7 @@ $(".imagen").click(function(e){
     var data = $(this).attr("data");
     var lightbox = '<div class="lightbox">'+
                         '<img src="' + enlaceImagen + '" alt="Cuadro" id="zoom_mw" data-zoom-image="'+ data+'">'+
-                        '<div class="btn-close">x</div>'+
+                        '<div class="btn-close"><i class="fas fa-times"></i></div>'+
                     '</div>';
     $("body").append(lightbox)
     $("#zoom_mw").elevateZoom({

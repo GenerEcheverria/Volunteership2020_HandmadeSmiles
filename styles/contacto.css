@@ -1,8 +1,7 @@
 .container hr{
     width: 6%;
     border: 1px var(--fc) solid;
-    margin: auto;
-    margin-bottom: 2%;
+    margin: 1% auto;
 }
 
 .container p{
@@ -13,21 +12,27 @@
     padding: 3% 14%;
 }
 
-.procedimiento{
-    padding: 4% 14%;
+.contacto-info{
+    margin-top: 3%;
+    text-align: justify;
 }
 
 .pasos{
     display: flex;
-    flex: column;
     justify-content: space-between;
-    align-items: center;
-    align-content: center;
 }
 
 .tarjeta{
-    width: 15%;
-    background: #F1EADF;
-    padding: 5%;
+    margin-top: 3%;
+    width: 20%;
+    height: auto;
+    background: var(--med);
+    padding: 3%;
     border-radius: 10%;
+    text-align: center;
+}
+
+.tarjeta p{
+    font-size: 22px;
+    margin-top: 10%;
 }
