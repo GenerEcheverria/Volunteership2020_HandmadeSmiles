@@ -36,3 +36,13 @@
     font-size: 22px;
     margin-top: 10%;
 }
+
+@media (max-width: 768px){
+    .container p{
+        font-size: 22px;
+    }
+    
+    .contacto{
+        padding: 3% 14%;
+    }
+}
