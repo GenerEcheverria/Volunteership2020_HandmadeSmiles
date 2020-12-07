@@ -34,6 +34,10 @@ li{
     width: 100%;
 }
 
+.menu-btn{
+    display: none;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -61,33 +65,42 @@ li{
     font-size: 18px;
 }
 
+.mediosListaMovil{
+    display: none;
+}
+
 .mediosLista li {
-    padding: 0 40px 0 40px;
+    padding: 0 5%;
 }
 
 
 /*NAVEGACION*/
 .nav-main{
+    width: 100%;
     font-size: 20px;
     text-transform: uppercase;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-evenly;
     padding: 20px;
     background-color: var(--bg);
+    
 }
 
 .nav-main img {
-    margin-left: 126px;
+    
     width: 103px;
     height: 104px;
+    
 }
 
 .nav-menu {
+    padding-right: 20%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-left: 161px;
+    
 }
 
 .nav-menu li a{
@@ -180,10 +193,8 @@ footer li{
     padding: 10px;
 }
 
-@media (max-width:768px){
-    .container {
-        margin-top: 180px;
-    }
+@media (max-width:956px){
+    
     
     .titulo{
         font-size: 22px;
@@ -203,13 +214,13 @@ footer li{
     }
     
     .nav-main img {
-        margin-left: 50%;
+        
         width: 90px;
         height: 90px;
     }
-    
-    .nav-menu {
-        margin-left: 10%;
+
+    .nav-menu{
+        padding-right: 0%;
     }
     
     .nav-menu li a{
@@ -249,5 +260,85 @@ footer li{
 }
 
 @media (max-width:414px){
+    .medios { 
+        background-color: var(--med);
+        padding: 10px;
+    }
+    
+    .mediosLista{
+        display: none;
+    }
+
+    .mediosListaMovil{
+        display: flex;
+    }
+
+    .mediosListaMovil li{
+        margin: 0 20px;
+    }
+
+    .nav-main img {
+        width: 68px;
+        height: 69px;
+    }
+    
+    .nav-main{
+        padding: 4px;
+        
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .menu-btn{
+        display: block;
+        position: fixed;
+        cursor: pointer;
+        top: 65px;
+        right: 30px;
+        z-index: 2;
+        font-size: 1.5rem;
+    }
+
+    .nav-main ul.nav-menu{
+        display: block;
+        position: absolute;
+        
+        top: 0;
+        left: 0;
+        background: var(--med);
+        height: 500%;
+        
+        padding: 30px;
+        opacity: .9;
+        transform: translateX(-400px);
+        transition: transform .5s ease-in-out;
+    }
+
+    .nav-main ul.nav-menu.show {
+        transform: translateX(-20px);
+    }
+
+    .nav-main ul.nav-menu li {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    .nav-menu li ul {
+        background-color: var(--med);
+    }
+
+    .nav-menu li ul.show{
+        display: block;
+    }
+
+    .nav-menu li ul li a{
+        padding: 0;
+    }
+
+    .container{
+        margin-top: 120px;
+    }
 
 }
