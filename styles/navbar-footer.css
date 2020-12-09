@@ -1,6 +1,9 @@
 *{
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 :root {
@@ -103,21 +106,37 @@ li{
     
 }
 
-.nav-menu li a{
-    display: block;
-    padding: 0 20px;
+.nav-menu li{
+    display: inline-block;
+    position: relative;
 }
 
-.nav-menu li ul {
+.nav-menu li a{
+    display: block;
+    padding: 20px;
+}
+
+.nav-menu li:hover .children{
+    display: block;
+}
+
+.children{
     display:none;
     position:absolute;
     text-transform: initial;
     background-color: var(--bg);
+    width: 120%;
+    z-index: 1000;
 }
 
-.nav-menu li ul li a{
-    padding: 10px;
-    text-align: center;
+.children li{
+    display:block;
+	overflow: hidden;
+	
+}
+
+.nav-menu li ul .children a{
+    display: block;
 }
 
 .nav-menu li:hover > ul {
@@ -224,7 +243,7 @@ footer li{
     }
     
     .nav-menu li a{
-        padding: 0 10px;
+        padding: 15px;
     }
     
     footer{
@@ -259,10 +278,20 @@ footer li{
     }
 }
 
-@media (max-width:414px){
+@media screen and (max-width: 500px) {
+    .menu-btn{
+        display: block;
+        position: fixed;
+        cursor: pointer;
+        top: 65px;
+        right: 30px;
+        z-index: 2;
+        font-size: 1.5rem;
+    }
+
     .medios { 
         background-color: var(--med);
-        padding: 10px;
+        padding: 7px;
     }
     
     .mediosLista{
@@ -277,68 +306,135 @@ footer li{
         margin: 0 20px;
     }
 
+    .nav-main{
+        padding: 13px;
+    }
+
     .nav-main img {
         width: 68px;
         height: 69px;
     }
-    
-    .nav-main{
-        padding: 4px;
-        
+
+    .nav-menu{
+        width: 80%;
+        height: calc(100% - 119px);
+        position: fixed;
+        right: 100%;
+        margin: 0;
+        display: block;
+        top: 131px;
+        left: -100%;
+        background: var(--med);
     }
 
-    .nav-menu {
+    .nav-menu li{
+        display: block;
+        background: var(--med);
+        border-bottom:1px solid rgba(255,255,255,.5);
+    }
+
+    .nav-menu li a{
+        display: block;
+    }
+
+    .nav-menu li:hover .children{
         display: none;
     }
 
-    .menu-btn{
-        display: block;
-        position: fixed;
-        cursor: pointer;
-        top: 65px;
-        right: 30px;
-        z-index: 2;
-        font-size: 1.5rem;
+    .children{
+        width: 100%;
+        position: relative;
     }
 
-    .nav-main ul.nav-menu{
-        display: block;
-        position: absolute;
-        
-        top: 0;
-        left: 0;
-        background: var(--med);
-        height: 500%;
-        
-        padding: 30px;
-        opacity: .9;
-        transform: translateX(-400px);
-        transition: transform .5s ease-in-out;
-    }
-
-    .nav-main ul.nav-menu.show {
-        transform: translateX(-20px);
-    }
-
-    .nav-main ul.nav-menu li {
-        padding: 20px;
-        font-size: 14px;
-    }
-
-    .nav-menu li ul {
-        background-color: var(--med);
-    }
-
-    .nav-menu li ul.show{
-        display: block;
-    }
-
-    .nav-menu li ul li a{
-        padding: 0;
+    .children li a{
+        margin-left: 20px;
     }
 
     .container{
-        margin-top: 120px;
+        margin-top: 131px;
     }
 
+    /*FOOTER*/
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        font-size: 16px;
+    }
+
+    h3{
+        font-size: 16px;
+        display: none;
+    }    
+    
+    footer hr {
+        display: none;
+    }
+    
+    footer li{
+        padding: 10px 0;
+    }
+    
+    .footer-empresa{
+        width: 90%;
+        align-items: center;
+        font-size: 18px;
+        text-align: justify;
+        padding: 20px;
+        margin: 10px 0 ;
+        
+    }
+    
+    .footer-empresa img{
+        width: 100px;
+        margin-bottom: 10px;
+    }
+    
+    .footer-section {
+        width: 90%;
+        align-items: flex-start;
+        padding: 10px 40px;
+        border-bottom: .5px solid var(--bg);
+    }
+
+    .footer-section :hover .btn-footer{
+        display: block;
+    }
+
+    .btn-footer{
+        display:none;
+        position:relative;
+        width: 120%;
+        z-index: 900;
+    }
+    
+    .btn-footer li{
+        display:block;
+        overflow: hidden;
+    }
+    
+    .btn-footer a{
+        display: block;
+    }
+
+    .footer-redes h3{
+        display: block;
+    }
+    
+    .btn-redes{
+        display: flex;
+    }
+    
+    .btn-redes a{
+        margin: 15px;
+    }
+
+    .btn-redes li{
+        position: relative;
+    }
+    
+    .derechos {
+        text-align: center;
+        padding: 10px;
+    }
 }

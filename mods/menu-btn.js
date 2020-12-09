@@ -1,7 +1,25 @@
-document.querySelector('.menu-btn').addEventListener('click',() => {
-    document.querySelector('.nav-menu').classList.toggle('show');
-})
+$(document).ready(main);
 
-document.querySelector('.productos').addEventListener('click',() => {
-    document.querySelector('.nav-menu li ul').classList.toggle('show');
-})
+var contador = 1;
+ 
+function main () {
+	$('.menu-btn').click(function(){
+		if (contador == 1) {
+			$('.nav-menu').animate({
+				left: '0'
+			});
+			contador = 0;
+		} else {
+			contador = 1;
+			$('.nav-menu').animate({
+				left: '-100%'
+			});
+		}
+	});
+ 
+	// Mostramos y ocultamos submenus
+	$('.submenu').click(function(){
+		$(this).children('.children').slideToggle();
+    });
+    
+}
