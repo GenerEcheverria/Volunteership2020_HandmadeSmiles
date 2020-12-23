@@ -37,12 +37,73 @@
     margin-top: 10%;
 }
 
-@media (max-width: 768px){
+@media (max-width: 956px){
     .container p{
         font-size: 22px;
     }
     
     .contacto{
-        padding: 3% 14%;
+        padding: 3% 10%;
+    }
+
+    .tarjeta{
+        width: 30%;
+        height: auto;
+        padding: 2%;
+        border-radius: 10%;
+        text-align: center;
+    }
+
+    .tarjeta p{
+        font-size: 20px;
+    }
+
+    .tarjeta img {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .container h2{
+        font-size: 20px;
+    }
+    
+    .container hr{
+        width: 20%;
+        margin: 2% auto;
+    }
+
+    .container p{
+        font-size: 20px;
+    }
+
+    .pasos{
+        flex-direction: column;
+    }
+    
+    .contacto{
+        padding: 6% 10%;
+    }
+
+    .tarjeta{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        border-radius: 5%;
+        justify-content: start;
+        align-items: center;
+        padding: 5%;
+    }
+
+    .tarjeta p{
+        font-size: 18px;
+        margin-top: 0;
+        
+    }
+
+    .tarjeta img {
+        width: 20%;
+        padding-right: 10px;
+        
     }
 }

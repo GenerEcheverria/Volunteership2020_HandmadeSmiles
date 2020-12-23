@@ -18,9 +18,8 @@
 body{
     background-color: var(--bg);
     color: var(--fc);
-    font-size: 16px;
     font-family: 'Tinos', sans-serif;
-    position: absolute;
+    
 }
 
 a{
@@ -33,6 +32,7 @@ li{
 }
 
 .top{
+    top: 0;
     position: fixed;
     width: 100%;
 }
@@ -99,7 +99,7 @@ li{
 }
 
 .nav-menu {
-    padding-right: 20%;
+    padding-right: 18%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -199,6 +199,10 @@ footer li{
     margin: 10px 0;
 }
 
+.footer-section div i{
+    display: none;
+}
+
 .btn-redes{
     display: flex;
 }
@@ -269,7 +273,7 @@ footer li{
     }
     
     .footer-section {
-        padding: 20px 0;
+        padding: 20px 10px;
         margin: 10px 0;
     }
 
@@ -278,7 +282,7 @@ footer li{
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 684px) {
     .menu-btn{
         display: block;
         position: fixed;
@@ -325,6 +329,7 @@ footer li{
         top: 131px;
         left: -100%;
         background: var(--med);
+        
     }
 
     .nav-menu li{
@@ -356,15 +361,9 @@ footer li{
 
     /*FOOTER*/
 
-    footer {
-        flex-direction: column;
-        align-items: center;
-        font-size: 16px;
-    }
 
     h3{
         font-size: 16px;
-        display: none;
     }    
     
     footer hr {
@@ -395,8 +394,21 @@ footer li{
         align-items: flex-start;
         padding: 10px 40px;
         border-bottom: .5px solid var(--bg);
+        
     }
 
+    .footer-section div {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .footer-section div i{
+        display: block;
+        
+    }
+
+    
     .footer-section :hover .btn-footer{
         display: block;
     }
@@ -405,8 +417,9 @@ footer li{
         display:none;
         position:relative;
         width: 120%;
-        z-index: 900;
+        
     }
+    
     
     .btn-footer li{
         display:block;
@@ -417,22 +430,22 @@ footer li{
         display: block;
     }
 
-    .footer-redes h3{
-        display: block;
-    }
-    
-    .btn-redes{
+    #footer-redes{
         display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-bottom: none;
     }
-    
+
+    #footer-redes h3{
+        font-size: 16px;
+        padding-right: 10%;
+    }
+   
     .btn-redes a{
         margin: 15px;
     }
 
-    .btn-redes li{
-        position: relative;
-    }
-    
     .derechos {
         text-align: center;
         padding: 10px;

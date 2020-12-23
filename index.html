@@ -7,50 +7,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="styles/inicio.css">
-    <link rel="stylesheet" href="styles/navbar-footer.css">
     <script src="mods/slider.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="mods/jquery.min.js"></script>
+    <script type="text/javascript" src="mods/jquery.elevatezoom.min.js"></script>
+    <script type="text/javascript" src="mods/load-nav-footer.js"></script>
 </head>
 <body>
-    <div class="top">
-        <div class="medios">
-            <ul class="mediosLista">
-                <li>
-                    <i class="fab fa-whatsapp"> 9991993310</i>                
-                </li>
-                <li>
-                    <a href="mailto: handmadesmilesmid@gmail.com"><i class="far fa-envelope"> handmadesmilesmid@gmail.com</i></a>                             
-                </li>
-                <li>
-                    <a href="https://www.facebook.com/handmade.smiles.merida" target="_blank"><i class="fab fa-facebook-f"> Facebook</i></a>             
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/handmade.smiles.mid/?hl=es-la" target="_blank"><i class="fab fa-instagram"> Instagram</i></a>                
-                </li>
-            </ul>
-        </div>
-        <nav class="nav-main">
-            <a href="index.html"><img src="Images/Logo.png" alt="LOGO" class="nav-brand"></a>
-            <ul class="nav-menu">
-                <li>
-                    <a href="index.html">Inicio</a>
-                </li>
-                <li>
-                    <a href="#">Productos <i class="fas fa-angle-down"></i></a>
-                    <ul>
-                        <li><a href="vestidos-casuales.html">Vestidos casuales</a></li>
-                        <li><a href="vestidos-fiesta.html">Vestidos de fiesta</a></li>
-                        <li><a href="ropones-bautizo.html">Ropones de bautizo</a></li>
-                        <li><a href="accesorios.html">Accesorios</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="nosotros.html">Quiénes somos</a>
-                </li>
-                <li>
-                    <a href="contacto.html">Contacto</a>
-                </li>
-            </ul>
-        </nav>
+    <div class="top" id="nav-placeholder"> 
+        
     </div>
     
     <div class="container">
@@ -61,17 +26,13 @@
         <div class="productosGenerales">
             <h2 class="titulo">Nuestros productos</h2>
             <div class="imagenesGenerales">
-                <div class="grupo1">
-                    <img class="IG1" src="Images/Productos generales/monedero.png" alt="monedero">
-                    <img class="IG4" src="Images/Productos generales/vestido1.jpg" alt="Vestido blanco">
-                </div>
-                <div class="grupo2">
-                    <img class="IG2" src="Images/Productos generales/entrega.jpg" alt="Caja de entrega">
-                    <img class="IG3" src="Images/Productos generales/vestido4.jpg" alt="Vestido rosa">
-                    <img class="IG5" src="Images/Productos generales/tutu1.jpg" alt="Tutu">
-                    <img class="IG6" src="Images/Productos generales/cuadro2.jpg" alt="Cuadro de flores">
-                    <img class="IG7" src="Images/Productos generales/flores.png" alt="Flores rojas">
-                </div>
+                <div class="IG1"></div>
+                <div class="IG2"></div>
+                <div class="IG3"></div>
+                <div class="IG4"></div>
+                <div class="IG5"></div>
+                <div class="IG6"></div>
+                <div class="IG7"></div>
             </div>
         </div>
         <div class="designer">
@@ -99,112 +60,61 @@
                 </li>
             </ul>
         </div>
-        <div class="clientes">
-            <div id="slider">
-                <h2 class="titulo">Clientes contentos</h2>
-                <div id="slider-wrapper">
-                    <div class="slide">
-                        <p>“De lujo para mi princesita… ¡gracias!”</p>
-                        <h4 class="caption">Patricia</h4>
-                    </div>
-                    <div class="slide">
-                        <p>“Qué hermosa se ve mi hija con éstos vestidos, la abuela los ama”</p>
-                        <h4 class="caption">Amalia</h4>
-                    </div>
-                    <div class="slide">
-                        <p>“Que lindas prendas para mi hija! Llegaron muy rápido, muchísimas gracias”</p>
-                        <h4 class="caption">Silvia</h4>
-                    </div>
-                    <div class="slide">
-                        <p>“Mil gracias, a toda nuesta familia nos encantó”</p>
-                        <h4 class="caption">Ana Laura</h4>
-                    </div>
-                    <div class="slider">
-                        <p>“El vestido está hermoso y mi hija se siente muy feliz”</p>
-                        <h4 class="caption">Maribel</h4>
-                    </div>
-                </div>
-                <div id="slider-nav">
-                    <a href="#" data-slide="0"><i class="fas fa-circle"></i></a>
-                    <a href="#" data-slide="1"><i class="fas fa-circle"></i></a>
-                    <a href="#" data-slide="2"><i class="fas fa-circle"></i></a>
-                    <a href="#" data-slide="3"><i class="fas fa-circle"></i></a>
-                    <a href="#" data-slide="4"><i class="fas fa-circle"></i></a>
-                </div>
+        <div id="slider">
+            <input type="radio" name="slider" id="slide1" checked>
+            <input type="radio" name="slider" id="slide2">
+            <input type="radio" name="slider" id="slide3">
+            <input type="radio" name="slider" id="slide4">
+            <input type="radio" name="slider" id="slide5">
+            <h2 class="titulo">Clientes contentos</h2>
+            <div id="slides">
+               <div id="overflow">
+                  <div class="inner">
+                     <div class="slide slide_1">
+                        <div class="slide-content">
+                           <p>“De lujo para mi princesita… ¡gracias!”</p>
+                            <h4 class="nombre-Cliente">PATRICIA</h4>
+                        </div>
+                     </div>
+                     <div class="slide slide_2">
+                        <div class="slide-content">
+                            <p>“Qué hermosa se ve mi hija con estos vestidos, la abuela los ama”</p>
+                            <h4 class="nombre-Cliente">AMALIA</h4>
+                        </div>
+                     </div>
+                     <div class="slide slide_3">
+                        <div class="slide-content">
+                            <p>“¡Que lindas prendas para mi hija! Llegaron muy rápido. Muchas gracias”</p>
+                            <h4 class="nombre-Cliente">SILVIA</h4>
+                        </div>
+                     </div>
+                     <div class="slide slide_4">
+                        <div class="slide-content">
+                            <p>“Mil gracias, a toda nuestra familia nos encantó”</p>
+                            <h4 class="nombre-Cliente">ANA LAURA</h4>
+                        </div>
+                     </div> 
+                     <div class="slide slide_5">
+                        <div class="slide-content">
+                            <p>“El vestido está hermoso y mi hija se siente muy feliz”</p>
+                            <h4 class="nombre-Cliente">MARIBEL</h4>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
+            
+            <div id="bullets">
+               <label for="slide1"></label>
+               <label for="slide2"></label>
+               <label for="slide3"></label>
+               <label for="slide4"></label>
+               <label for="slide5"></label>
+            </div>
+         </div>
+        
     </div>
-    <footer>
-        <div class="footer-empresa">
-            <img src="Images/logoInvertido.png" alt="Logo" class = "nav-brand2">
-            <p>Empresa mexicana de bordados únicos 100% hechos a mano.</p>
-        </div>
-        <div class="footer-section">
-            <h3>Handmade Smiles</h3>
-            <hr>
-            <ul class=btn-footer>
-                <li>
-                    <a href="nosotros.html">Acerca de nosotros</a>
-                </li>
-                <li>
-                    <a href="contacto.html">Contacto</a>
-                </li>
-                <li>
-                    <a href="contacto.html">Procedimiento de compra</a>
-                </li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Productos</h3>
-            <hr>
-            <ul class=btn-footer>
-                <li>
-                    <a href="vestidos-casuales.html">Vestidos casuales</a>
-                </li>
-                <li>
-                    <a href="vestidos-fiesta.html">Vestidos de fiesta</a>
-                </li>
-                <li>
-                    <a href="ropones-bautizo.html">Ropones de bautizo</a>
-                </li>
-                <li>
-                    <a href="accesorios.html">Accesorios</a>
-                </li>
-                <li>
-                    <a href="accesorios.html">Bolsas para niñas</a>
-                </li>
-                <li>
-                    <a href="accesorios.html">Tutús</a>
-                </li>
-                <li>
-                    <a href="accesorios.html">Cuadros personalizados</a>
-                </li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Comunícate</h3>
-            <hr>
-            <ul class=btn-footer>
-                <li>
-                    <p>Teléfono: 9991993410</p>
-                </li>
-                <li>
-                    <a href="mailto: handmadesmilesmid@gmail.com">handmadesmilesmid@gmail.com</a>
-                </li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Síguenos</h3>
-            <hr>
-            <ul class=btn-redes>
-                <li>
-                    <a href="https://www.facebook.com/handmade.smiles.merida" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/handmade.smiles.mid/?hl=es-la" target="_blank"><i class="fab fa-instagram"></i></a>
-                </li>
-            </ul>
-        </div>
+    <footer id="footer-placeholder">    
     </footer>
     <p class="derechos">© 2020 Handmade Smiles. Derechos reservados</p>
 </body>

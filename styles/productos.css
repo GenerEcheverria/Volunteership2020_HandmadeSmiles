@@ -22,20 +22,20 @@
 #conjuntoImagenes{
     width: 85%;
     margin: auto;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     margin-bottom: 20px;
-    justify-content: center;
-}
-
-#conjuntoImagenes img{
-    max-width: 100%;
-    cursor: pointer;
+    align-items: center;
 }
 
 .item{
-    margin: 10px;
-    width: 23%;
+    padding: 10px;
+    justify-self: center;
+}
+
+.imagen{
+    max-width: 100%;
+    cursor: pointer;
 }
 
 .lightbox{
@@ -47,6 +47,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .btn-close{
@@ -67,7 +68,7 @@
 }
 
 .infoProductos {
-    width: 83%;
+    width: 81%;
     background-color: var(--ds);
     padding: 30px;
     text-align: justify;
@@ -81,4 +82,60 @@
 .infoProductos p{
     padding: 15px;
     font-size: 24px;
+}
+
+@media (max-width: 956px){
+    .container p{
+        font-size: 22px;
+    }
+
+    .lightbox{
+        justify-content: start;
+        padding: 15%;
+    }
+
+
+}
+
+@media screen and (max-width: 500px){
+    .container p{
+        font-size: 20px;
+    }
+
+    .container h2{
+        font-size: 20px;
+    }
+
+    .imagenes {
+        padding: 20px;
+    }
+
+    #conjuntoImagenes{
+        padding-top: 20px;
+        width: 100%;
+        grid-template-columns: repeat(2,1fr);
+        margin-bottom: 20px;
+    }
+
+    .lightbox{
+        justify-content: center;
+        padding: 0;
+    }
+
+    .btn-close{
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        padding-top: 10px;
+    }
+
+    .item{
+        padding: 5px;
+    }
+
+    .infoProductos {
+        width: 100%;
+        padding: 20px;
+        text-align: justify;
+    }
 }

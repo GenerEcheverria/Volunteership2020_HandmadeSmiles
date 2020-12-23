@@ -1,7 +1,13 @@
 /*HERO*/
+*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .hero {
    width: 100%;
-   height: 650px;
+   height: 700px;
    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/Images/hero.png') no-repeat center center/cover;
    display: flex;
    flex-direction: column;
@@ -26,30 +32,68 @@
 
 /*PRODUCTOS GENERALES*/
 .productosGenerales{
-    margin-top: 100px;    
+    width: 95%;
+    max-width: 120rem;
+    margin: auto;
+    padding: 100px 1.5rem;
 }
 
 .imagenesGenerales {
     margin-top: 50px;
-    display: flex;
-    padding: 0 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1.5rem;
+    grid-template-areas:
+     'IG1 IG1 IG2 IG2 IG2 IG3 IG3 IG3 IG3'
+     'IG4 IG4 IG2 IG2 IG2 IG3 IG3 IG3 IG3'
+     'IG4 IG4 IG5 IG5 IG6 IG6 IG7 IG7 IG7';   
 }
 
-.imagenesGenerales img {
-    padding: 5px;
+.imagenesGenerales div{
+    width: 100%;
+    height: 15rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.grupo1{
-    display: flex;
-    flex-direction: column;
-    
+.IG1{
+    grid-area: IG1;
+    background-image: url("/Images/Productos generales/monedero.png");
 }
 
-.grupo2{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    
+.IG2{
+    grid-area: IG2;
+    background-image: url("/Images/Productos generales/entrega.jpg");
+    min-height:  31.5rem;
+}
+
+.IG3{
+    grid-area: IG3;
+    background-image: url("/Images/Productos generales/vestido4.jpg");
+    min-height:  31.5rem;
+}
+
+.IG4{
+    grid-area: IG4;
+    background-image: url("/Images/Productos generales/vestido1.jpg");
+    min-height: 31.5rem;
+}
+
+.IG5{
+    grid-area: IG5;
+    background-image: url("/Images/Productos generales/tutu1.jpg");
+}
+
+.IG6{
+    grid-area: IG6;
+    background-image: url("/Images/Productos generales/cuadro2.jpg");
+}
+
+.IG7{
+    grid-area: IG7;
+    background-image: url("/Images/Productos generales/flores.png");
 }
 
 
@@ -59,16 +103,16 @@
     background: var(--ds);
     display: flex;
     align-items: center;
-    margin: 90px ;
+    margin-bottom: 90px ;
 }
 
 .info{
-    padding: 10%;
+    padding: 8%;
 }
 
 .designer h2{
     font-size: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .designer p{
@@ -88,7 +132,7 @@
     display: flex;
     justify-content: space-evenly;
     padding: 20px 20px 40px 20px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .satisfaccion li{
@@ -107,78 +151,291 @@
     margin-left: 19px;
 }
 
-/*COMENTARIOS       ARREGLAR*/
-.clientes{
+/*COMENTARIOS*/
+#slider {
+    padding: 20px;
     width: 100%;
+    text-align: center;
     background: var(--ds);
+}
+
+#slider input[type=radio] {
+    display: none;
+}
+ 
+#slider label {
+    cursor:pointer;
+    text-decoration: none;
+}
+ 
+#slider h2{
+    padding: 30px;
+}
+ 
+#slides {
+    background: var(--ds);
+    z-index: 1;
+}
+ 
+#overflow {
+    width: 100%;
+    overflow: hidden;
+}
+ 
+#slide1:checked ~ #slides .inner {
+    margin-left: 0;
+}
+
+#slide2:checked ~ #slides .inner {
+    margin-left: -100%;
+}
+ 
+#slide3:checked ~ #slides .inner {
+    margin-left: -200%;
+}
+ 
+#slide4:checked ~ #slides .inner {
+    margin-left: -300%;
+}
+ 
+#slide5:checked ~ #slides .inner {
+    margin-left: -400%;
+}
+
+#slides .inner {
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    width: 500%;
+    height: 125px;
+}
+ 
+#slides .slide {
+    width: 20%;
+    float:left;
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: var(--bg);
+    
+}
+
+.slide-content{
+    height: 100%;
+}
+
+.slide-content p{
+    font-size: 24px;
+    font-style: oblique;
+    font-weight: lighter;
+}
+
+.nombre-Cliente{
     padding-top: 30px;
+    font-size: 24px;
 }
 
-#slider{
-    background: var(--ds);
-	width: 960px;
-	overflow: hidden;
+#bullets {
+    padding: 20px 0 ;
+    text-align: center;
+    background: #b6a792;
+    width: 100%
 }
 
-#slider-wrapper{
-    width: 9999px;
-	position: relative;
-	transition: left 400ms linear;
+#bullets label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius:100%;
+    background: var(--med);
+    margin: 0 10px;
 }
 
-.slide{
-    float: left;
-	width: 960px;
-	height: 100px;
-	position: relative;
-	overflow: hidden;
+#slide1:checked ~ #bullets label:nth-child(1),
+#slide2:checked ~ #bullets label:nth-child(2), 
+#slide3:checked ~ #bullets label:nth-child(3),
+#slide4:checked ~ #bullets label:nth-child(4),
+#slide5:checked ~ #bullets label:nth-child(5){
+    background: var(--fc);
+
 }
 
-.slide p{
-    position: absolute;
-    text-transform: initial;
+@media screen and (max-width: 956px){
+    .hero {
+        width: 100%;
+        height: 500px;
+     }
+     
+     .hero h2 {
+         font-size: 40px;
+     }
+     
+     .hero p {
+         font-size: 30px;
+     }
+
+    .imagenesGenerales {
+        margin-top: 40px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+         'IG2 IG2 IG2 IG2 IG4 IG4 IG4 IG4 '
+         'IG2 IG2 IG2 IG2 IG4 IG4 IG4 IG4 '
+         'IG6 IG6 IG6 IG6 IG4 IG4 IG4 IG4 '
+         'IG6 IG6 IG6 IG6 IG1 IG1 IG1 IG1'
+         'IG3 IG3 IG3 IG3 IG3 IG3 IG3 IG3'
+         'IG5 IG5 IG5 IG5 IG7 IG7 IG7 IG7';   
+    }
+
+    .IG2{
+        min-height: 26rem;
+    }
+
+    .IG6{
+        min-height: 20rem;
+    }
+
+    .designer{
+        width: 85%;
+    }
+
+    
+    .info{
+        padding: 6%;
+    }
+    
+    .designer h2{
+        font-size: 25px;
+    }
+    
+    .designer p{
+        font-size: 22px;
+    }
+
+    .satisfaccion li{
+        width: 40%;
+        padding: 0 10px;
+        flex-direction: column;
+    }
+
+    .satisfaccion img {
+        width: 55%;
+        padding-bottom: 10%;
+        height: auto;
+    }
+
+    .satisfaccion p{
+        margin-left: 0;
+    }
+
+    .slide-content p{
+    
+        padding: 20px;
+        font-size: 20px;
+
+    }
+
+    
 }
 
-.caption{
-    margin: 0;
-	position: absolute;
-	z-index: 100;
-	bottom: -2em;
-	left: 0;
-	width: 100%;
-	height: 2em;
-	line-height: 2;
-	text-align: center;
-	color: #fff;
-    transition: bottom 500ms ease-in;
-    font-size: 20px;
+@media screen and (max-width: 659px){
+
+    .container h2{
+        font-size: 20px;
+    }
+
+    .productosGenerales{
+        padding-top: 30px;
+    }
+    
+    .designer{
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .designer img{
+        width: 60%;
+        padding: 5%;
+    }
+
+    .info{
+        padding: 0 5% 5% 5%;
+    }
+
+    #slider h2{
+        padding: 20px;
+    }
+    
+    .designer h2{
+        font-size: 21px;
+        text-align: center;
+    }
+    
+    .designer p{
+        font-size: 20px;
+    }
+
+    .satisfaccion ul{
+        flex-direction: column;
+        padding: 20px 0px 40px 0px;
+        align-items: center;
+    }
+    
+    .satisfaccion li{
+        width: 90%;
+        flex-direction: row;
+        margin: 0 10px;
+        align-items: center;
+        padding: 5px 0;
+    }
+    
+    .satisfaccion img {
+        width: 30%;
+        padding: 0;
+    }
+    
+    .satisfaccion p{
+        margin-left: 16px;
+    }
+    
+    #slider{
+        padding: 5px;
+    }
+    
+    .slide-content p{
+        font-size: 18px;
+    }
+
+    .nombre-Cliente{
+        padding-top: 0;
+        font-size: 18px;
+    }
 }
 
-.caption.visible {
-    bottom: 0;
+@media screen and (max-width: 500px){
+    .hero {
+        width: 100%;
+        height: 300px;
+     }
+     
+     .hero h2 {
+         font-size: 20px;
+     }
+     
+     .hero p {
+         font-size: 14px;
+     }
+
+    .imagenesGenerales {
+        margin-top: 30px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+         'IG1 '
+         'IG2 '
+         'IG3 '
+         'IG4'
+         'IG5'
+         'IG6'
+         'IG7';   
+    }
+
 }
-
-#slider-nav {
-	margin: 1em 0;
-	text-align: center;
-}
-
-#slider-nav a {
-	width: 2em;
-	height: 2em;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	line-height: 2;
-	margin-right: 0.5em;
-}
-
-#slider-nav a.current {
-	border-color: #000;
-}
-
-
-
-

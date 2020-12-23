@@ -5,13 +5,35 @@ $(".imagen").click(function(e){
                         '<img src="' + enlaceImagen + '" alt="Cuadro" id="zoom_mw" data-zoom-image="'+ data+'">'+
                         '<div class="btn-close"><i class="fas fa-times"></i></div>'+
                     '</div>';
-    $("body").append(lightbox)
-    $("#zoom_mw").elevateZoom({
-        scrollZoom : true,
-        cursor: "crosshair",
-        zoomWindowOffetx: 15,
-        zoomLevel: 3
-    });
+    
+    if ($(window).width()>956){
+        $("body").append(lightbox)
+        $("#zoom_mw").elevateZoom({
+            scrollZoom : true,
+            cursor: "crosshair",
+            zoomWindowOffetx: 15,
+            zoomLevel: 3
+        });
+    } else {
+        if ($(window).width()>500){
+            $("body").append(lightbox)
+            $("#zoom_mw").elevateZoom({
+                scrollZoom : true,
+                cursor: "crosshair",
+                zoomWindowOffetx: 15,
+                zoomLevel: 3,
+                zoomWindowWidth: 220,
+                zoomWindowHeight: 220,
+
+            });
+        }
+        else {
+            $("body").append(lightbox)
+        }
+    }
+    
+    
+    
     $(".btn-close").click(function(){
         $(".lightbox").remove();
         $(".zoomContainer").remove();
